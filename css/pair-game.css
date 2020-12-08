@@ -1,0 +1,86 @@
+@font-face{
+    font-family: majorMonoDisplay;
+    src: url(MajorMonoDisplay-Regular.ttf);
+}
+
+*{
+    box-sizing: border-box;
+    font-family: majorMonoDisplay,sans-serif;
+    
+}
+
+html{
+    min-height: 100vh;
+}
+
+body{
+    margin: 0;
+    background: radial-gradient(#7c0e00, #180000) ;
+}
+
+.title{
+    color: #f7aa06;
+    text-align: center;
+}
+
+.whattodo{
+    color: #e0d53a;
+    text-align: center;
+}
+
+.clock{
+    color: #cace93;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.header__container{
+    display: flex;
+    flex-direction: column;
+}
+
+.card__container{
+    display: grid;
+    grid-template-columns: repeat(5,auto);
+    grid-gap: 1.5rem;
+    margin: 5rem;
+    justify-content: center;
+    
+    
+}
+
+.card{
+    border-radius: 5%;
+    height: 175px;
+    width: 125px;
+   background-color: #eeeeee;
+}
+
+.card .card__back:hover{
+    box-shadow: 0px 0px 5px #f7aa06;
+    transition: boxshadow 0.1 ease-in-out;
+}
+
+.card__face{
+    position: absolute;
+   transition: transform 500ms ease-out;
+   backface-visibility: hidden;
+  
+}
+.card__front .card{
+
+    transform: rotateY(180deg);
+    
+}
+.card__back .card{
+    transform: rotateY(-180deg);
+}
+
+
+
+.creator,.dragons,.endora,.gladius,.heavenandhell,.goblin{
+    border-radius: 5%;
+}
+
